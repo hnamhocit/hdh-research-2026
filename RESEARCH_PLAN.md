@@ -33,9 +33,12 @@
 ## 3. Tuần 1 — Đặc tả, nguồn và thiết kế kiểm thử
 
 ### Nam — Điều phối và thiết kế
-- [ ] Tạo bảng theo dõi công việc.
-- [ ] Chốt hai câu hỏi nghiên cứu: quy trình dịch LA → PA và điều kiện địa chỉ không hợp lệ.
-- [ ] Viết `docs/specification.md`: phạm vi, giả định, cách đánh số page/frame, định dạng input/output và mã lỗi.
+
+[Xem bảng theo dõi và checklist tích hợp của Nam](docs/integration-review.md).
+
+- [x] Tạo bảng theo dõi công việc.
+- [x] Chốt hai câu hỏi nghiên cứu: quy trình dịch LA → PA và điều kiện địa chỉ không hợp lệ.
+- [x] Viết `docs/specification.md`: phạm vi, giả định, cách đánh số page/frame, định dạng input/output và mã lỗi.
 - [ ] Chốt page size và mẫu page table với cả nhóm.
 - [ ] Review specification cùng Minh và Sơn để bảo đảm code/test dùng chung hợp đồng dữ liệu.
 
@@ -71,9 +74,12 @@
 ## 4. Tuần 2 — Giải thuật, mô phỏng và trace mẫu
 
 ### Nam
-- [ ] Review pseudocode và các nhánh xử lý lỗi.
-- [ ] Xác nhận chương trình tuân thủ specification tuần 1.
-- [ ] Tích hợp và chạy thử một ví dụ thành công, một ví dụ lỗi.
+
+[Xem minh chứng chạy tích hợp và regression](docs/integration-review.md#ca-tích-hợp).
+
+- [x] Review pseudocode và các nhánh xử lý lỗi.
+- [x] Xác nhận chương trình tuân thủ specification tuần 1.
+- [x] Tích hợp và chạy thử một ví dụ thành công, một ví dụ lỗi.
 
 ### Đăng
 - [ ] Hoàn thiện giải thích cơ chế dịch địa chỉ theo từng bước.
@@ -107,9 +113,12 @@
 ## 5. Tuần 3 — Kiểm thử, kiểm chứng độc lập và phân tích
 
 ### Nam
-- [ ] Review tính nhất quán giữa specification, code và bộ test.
-- [ ] Kiểm tra cách phân biệt lỗi page ngoài bảng với entry invalid theo quy ước đã công bố.
-- [ ] Điều phối sửa lỗi và chạy regression test.
+
+[Xem minh chứng chạy tích hợp và regression](docs/integration-review.md#ca-tích-hợp).
+
+- [x] Review tính nhất quán giữa specification, code và bộ test.
+- [x] Kiểm tra cách phân biệt lỗi page ngoài bảng với entry invalid theo quy ước đã công bố.
+- [x] Điều phối sửa lỗi và chạy regression test.
 
 ### Đăng
 - [ ] So sánh paging với **segmentation hoặc base/limit relocation** theo ít nhất 3 tiêu chí.
@@ -146,9 +155,16 @@
 ## 6. Tuần 4 — Hồ sơ nộp, rà soát và trình bày
 
 ### Nam
+
+[Xem kết quả rà soát tuần 4 và các mục chờ xác nhận](docs/integration-review.md#kết-quả-rà-soát-tuần-4).
+
 - [ ] Review toàn bộ yêu cầu trong PDF đề bài.
 - [ ] Kiểm tra code, report và kết quả có nhất quán.
+  - [x] Đối chiếu code, đặc tả và kết quả tích hợp.
+  - [ ] Đối chiếu với báo cáo PDF khi có bản báo cáo.
 - [ ] Tổ chức review chéo và chạy thử quy trình tái hiện từ đầu.
+  - [x] Chạy lại theo README từ thư mục tạm và đối chiếu file kết quả.
+  - [ ] Tổ chức review chéo với các thành viên.
 - [ ] Tổng hợp contribution statement dựa trên đóng góp thực tế của từng người.
 - [ ] Xác nhận bộ hồ sơ cuối cùng trước khi nộp.
 
@@ -185,16 +201,16 @@
 
 | ID | Trường hợp | Expected result | Actual result | Pass/Fail |
 |---|---|---|---|---|
-| T01 | Địa chỉ hợp lệ ở page A | Chưa tính | Chưa chạy | ☐ |
-| T02 | Địa chỉ hợp lệ ở page B (khác A) | Chưa tính | Chưa chạy | ☐ |
-| T03 | Địa chỉ hợp lệ ở page C (khác A, B) | Chưa tính | Chưa chạy | ☐ |
-| T04 | Offset = 0 | Chưa tính | Chưa chạy | ☐ |
-| T05 | Offset = P − 1 | Chưa tính | Chưa chạy | ☐ |
-| T06 | Page number ngoài page table | Chưa tính | Chưa chạy | ☐ |
-| T07 | Page table entry invalid | Chưa tính | Chưa chạy | ☐ |
-| T08 | Trường hợp biên do nhóm chọn | Chưa tính | Chưa chạy | ☐ |
+| T01 | LA 37, hợp lệ ở page 2 | PA 117 | PA 117 | PASS |
+| T02 | LA 51, hợp lệ ở page 3 | PA 3 | PA 3 | PASS |
+| T03 | LA 5, hợp lệ ở page 0 | PA 53 | PA 53 | PASS |
+| T04 | LA 48, offset = 0 | PA 0 | PA 0 | PASS |
+| T05 | LA 63, offset = P − 1 | PA 15 | PA 15 | PASS |
+| T06 | LA 64, page ngoài bảng | `PAGE_OUT_OF_RANGE` | `PAGE_OUT_OF_RANGE` | PASS |
+| T07 | LA 16, entry invalid | `INVALID_ENTRY` | `INVALID_ENTRY` | PASS |
+| T08 | LA −1, địa chỉ âm | `INVALID_ADDRESS` | `INVALID_ADDRESS` | PASS |
 
-> Điền dữ liệu cụ thể sau khi thống nhất page table. Không đánh dấu PASS nếu chưa có actual result và đối chiếu.
+[Xem kết quả tích hợp](data/actual_results.json) và [đối chiếu theo dải byte](verification/byte-ranges.md).
 
 ## 8. Checklist nghiệm thu cuối
 
@@ -221,7 +237,7 @@
 
 | Thành viên | Công việc thực tế đã hoàn thành | Minh chứng (commit/PR/file) | Xác nhận |
 |---|---|---|---|
-| Nam | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
+| Nam | Codex hỗ trợ đặc tả, bộ tích hợp, regression và rà soát hồ sơ ngày 23/11/2026. Nam cần xác nhận phần đóng góp cá nhân. | [Đặc tả](docs/specification.md), [theo dõi](docs/integration-review.md), [dữ liệu](data/integration_cases.json) | ☐ |
 | Đăng | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
 | Minh | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
 | Sơn | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |

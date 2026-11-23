@@ -1,0 +1,443 @@
+[
+  {
+    "id": "T01",
+    "expected": {
+      "logical_address": 37,
+      "status": "ok",
+      "page": 2,
+      "offset": 5,
+      "frame": 7,
+      "physical_address": 117,
+      "error": null
+    },
+    "actual": {
+      "logical_address": 37,
+      "page": 2,
+      "offset": 5,
+      "frame": 7,
+      "physical_address": 117,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 37,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 2,
+          "offset": 5
+        },
+        {
+          "step": "check_page",
+          "page": 2,
+          "page_count": 4,
+          "passed": true
+        },
+        {
+          "step": "check_valid",
+          "page": 2,
+          "valid": 1
+        },
+        {
+          "step": "read_frame",
+          "frame": 7
+        },
+        {
+          "step": "compute_pa",
+          "frame": 7,
+          "page_size": 16,
+          "offset": 5,
+          "physical_address": 117
+        },
+        {
+          "step": "result",
+          "status": "ok",
+          "error": null
+        }
+      ],
+      "status": "ok",
+      "error": null
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T02",
+    "expected": {
+      "logical_address": 51,
+      "status": "ok",
+      "page": 3,
+      "offset": 3,
+      "frame": 0,
+      "physical_address": 3,
+      "error": null
+    },
+    "actual": {
+      "logical_address": 51,
+      "page": 3,
+      "offset": 3,
+      "frame": 0,
+      "physical_address": 3,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 51,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 3,
+          "offset": 3
+        },
+        {
+          "step": "check_page",
+          "page": 3,
+          "page_count": 4,
+          "passed": true
+        },
+        {
+          "step": "check_valid",
+          "page": 3,
+          "valid": 1
+        },
+        {
+          "step": "read_frame",
+          "frame": 0
+        },
+        {
+          "step": "compute_pa",
+          "frame": 0,
+          "page_size": 16,
+          "offset": 3,
+          "physical_address": 3
+        },
+        {
+          "step": "result",
+          "status": "ok",
+          "error": null
+        }
+      ],
+      "status": "ok",
+      "error": null
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T03",
+    "expected": {
+      "logical_address": 5,
+      "status": "ok",
+      "page": 0,
+      "offset": 5,
+      "frame": 3,
+      "physical_address": 53,
+      "error": null
+    },
+    "actual": {
+      "logical_address": 5,
+      "page": 0,
+      "offset": 5,
+      "frame": 3,
+      "physical_address": 53,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 5,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 0,
+          "offset": 5
+        },
+        {
+          "step": "check_page",
+          "page": 0,
+          "page_count": 4,
+          "passed": true
+        },
+        {
+          "step": "check_valid",
+          "page": 0,
+          "valid": 1
+        },
+        {
+          "step": "read_frame",
+          "frame": 3
+        },
+        {
+          "step": "compute_pa",
+          "frame": 3,
+          "page_size": 16,
+          "offset": 5,
+          "physical_address": 53
+        },
+        {
+          "step": "result",
+          "status": "ok",
+          "error": null
+        }
+      ],
+      "status": "ok",
+      "error": null
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T04",
+    "expected": {
+      "logical_address": 48,
+      "status": "ok",
+      "page": 3,
+      "offset": 0,
+      "frame": 0,
+      "physical_address": 0,
+      "error": null
+    },
+    "actual": {
+      "logical_address": 48,
+      "page": 3,
+      "offset": 0,
+      "frame": 0,
+      "physical_address": 0,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 48,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 3,
+          "offset": 0
+        },
+        {
+          "step": "check_page",
+          "page": 3,
+          "page_count": 4,
+          "passed": true
+        },
+        {
+          "step": "check_valid",
+          "page": 3,
+          "valid": 1
+        },
+        {
+          "step": "read_frame",
+          "frame": 0
+        },
+        {
+          "step": "compute_pa",
+          "frame": 0,
+          "page_size": 16,
+          "offset": 0,
+          "physical_address": 0
+        },
+        {
+          "step": "result",
+          "status": "ok",
+          "error": null
+        }
+      ],
+      "status": "ok",
+      "error": null
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T05",
+    "expected": {
+      "logical_address": 63,
+      "status": "ok",
+      "page": 3,
+      "offset": 15,
+      "frame": 0,
+      "physical_address": 15,
+      "error": null
+    },
+    "actual": {
+      "logical_address": 63,
+      "page": 3,
+      "offset": 15,
+      "frame": 0,
+      "physical_address": 15,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 63,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 3,
+          "offset": 15
+        },
+        {
+          "step": "check_page",
+          "page": 3,
+          "page_count": 4,
+          "passed": true
+        },
+        {
+          "step": "check_valid",
+          "page": 3,
+          "valid": 1
+        },
+        {
+          "step": "read_frame",
+          "frame": 0
+        },
+        {
+          "step": "compute_pa",
+          "frame": 0,
+          "page_size": 16,
+          "offset": 15,
+          "physical_address": 15
+        },
+        {
+          "step": "result",
+          "status": "ok",
+          "error": null
+        }
+      ],
+      "status": "ok",
+      "error": null
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T06",
+    "expected": {
+      "logical_address": 64,
+      "status": "error",
+      "page": 4,
+      "offset": 0,
+      "frame": null,
+      "physical_address": null,
+      "error": "PAGE_OUT_OF_RANGE"
+    },
+    "actual": {
+      "logical_address": 64,
+      "page": 4,
+      "offset": 0,
+      "frame": null,
+      "physical_address": null,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 64,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 4,
+          "offset": 0
+        },
+        {
+          "step": "check_page",
+          "page": 4,
+          "page_count": 4,
+          "passed": false
+        },
+        {
+          "step": "result",
+          "status": "error",
+          "error": "PAGE_OUT_OF_RANGE"
+        }
+      ],
+      "status": "error",
+      "error": "PAGE_OUT_OF_RANGE"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T07",
+    "expected": {
+      "logical_address": 16,
+      "status": "error",
+      "page": 1,
+      "offset": 0,
+      "frame": null,
+      "physical_address": null,
+      "error": "INVALID_ENTRY"
+    },
+    "actual": {
+      "logical_address": 16,
+      "page": 1,
+      "offset": 0,
+      "frame": null,
+      "physical_address": null,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": 16,
+          "passed": true
+        },
+        {
+          "step": "split",
+          "page_size": 16,
+          "page": 1,
+          "offset": 0
+        },
+        {
+          "step": "check_page",
+          "page": 1,
+          "page_count": 4,
+          "passed": true
+        },
+        {
+          "step": "check_valid",
+          "page": 1,
+          "valid": 0
+        },
+        {
+          "step": "result",
+          "status": "error",
+          "error": "INVALID_ENTRY"
+        }
+      ],
+      "status": "error",
+      "error": "INVALID_ENTRY"
+    },
+    "result": "PASS"
+  },
+  {
+    "id": "T08",
+    "expected": {
+      "logical_address": -1,
+      "status": "error",
+      "page": null,
+      "offset": null,
+      "frame": null,
+      "physical_address": null,
+      "error": "INVALID_ADDRESS"
+    },
+    "actual": {
+      "logical_address": -1,
+      "page": null,
+      "offset": null,
+      "frame": null,
+      "physical_address": null,
+      "trace": [
+        {
+          "step": "validate_address",
+          "logical_address": -1,
+          "passed": false
+        },
+        {
+          "step": "result",
+          "status": "error",
+          "error": "INVALID_ADDRESS"
+        }
+      ],
+      "status": "error",
+      "error": "INVALID_ADDRESS"
+    },
+    "result": "PASS"
+  }
+]

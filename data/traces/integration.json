@@ -1,0 +1,95 @@
+{
+  "37": [
+    {
+      "step": "validate_address",
+      "logical_address": 37,
+      "passed": true
+    },
+    {
+      "step": "split",
+      "page_size": 16,
+      "page": 2,
+      "offset": 5
+    },
+    {
+      "step": "check_page",
+      "page": 2,
+      "page_count": 4,
+      "passed": true
+    },
+    {
+      "step": "check_valid",
+      "page": 2,
+      "valid": 1
+    },
+    {
+      "step": "read_frame",
+      "frame": 7
+    },
+    {
+      "step": "compute_pa",
+      "frame": 7,
+      "page_size": 16,
+      "offset": 5,
+      "physical_address": 117
+    },
+    {
+      "step": "result",
+      "status": "ok",
+      "error": null
+    }
+  ],
+  "64": [
+    {
+      "step": "validate_address",
+      "logical_address": 64,
+      "passed": true
+    },
+    {
+      "step": "split",
+      "page_size": 16,
+      "page": 4,
+      "offset": 0
+    },
+    {
+      "step": "check_page",
+      "page": 4,
+      "page_count": 4,
+      "passed": false
+    },
+    {
+      "step": "result",
+      "status": "error",
+      "error": "PAGE_OUT_OF_RANGE"
+    }
+  ],
+  "16": [
+    {
+      "step": "validate_address",
+      "logical_address": 16,
+      "passed": true
+    },
+    {
+      "step": "split",
+      "page_size": 16,
+      "page": 1,
+      "offset": 0
+    },
+    {
+      "step": "check_page",
+      "page": 1,
+      "page_count": 4,
+      "passed": true
+    },
+    {
+      "step": "check_valid",
+      "page": 1,
+      "valid": 0
+    },
+    {
+      "step": "result",
+      "status": "error",
+      "error": "INVALID_ENTRY"
+    }
+  ]
+}

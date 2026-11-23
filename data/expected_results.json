@@ -1,0 +1,10 @@
+[
+  {"logical_address": 37, "status": "ok", "page": 2, "offset": 5, "frame": 7, "physical_address": 117, "error": null},
+  {"logical_address": 51, "status": "ok", "page": 3, "offset": 3, "frame": 0, "physical_address": 3, "error": null},
+  {"logical_address": 5, "status": "ok", "page": 0, "offset": 5, "frame": 3, "physical_address": 53, "error": null},
+  {"logical_address": 48, "status": "ok", "page": 3, "offset": 0, "frame": 0, "physical_address": 0, "error": null},
+  {"logical_address": 63, "status": "ok", "page": 3, "offset": 15, "frame": 0, "physical_address": 15, "error": null},
+  {"logical_address": 64, "status": "error", "page": 4, "offset": 0, "frame": null, "physical_address": null, "error": "PAGE_OUT_OF_RANGE"},
+  {"logical_address": 16, "status": "error", "page": 1, "offset": 0, "frame": null, "physical_address": null, "error": "INVALID_ENTRY"},
+  {"logical_address": -1, "status": "error", "page": null, "offset": null, "frame": null, "physical_address": null, "error": "INVALID_ADDRESS"}
+]
