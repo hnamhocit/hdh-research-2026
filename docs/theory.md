@@ -53,7 +53,7 @@ Mỗi mục trong bảng trang có thể kèm một bit valid–invalid [2, tr. 
 
 Ngoài bit valid, phần cứng có thể có thanh ghi độ dài bảng trang (PTLR) để cho biết kích thước của bảng; mỗi địa chỉ logic được so với giá trị này, nếu không hợp lệ thì gây trap [2, tr. 369], [3, slide 30, 35]. Điều này tương ứng với trường hợp "số trang nằm ngoài bảng" trong đề, tách biệt với trường hợp "mục trang có bit invalid".
 
-Các tên lỗi `INVALID_ADDRESS`, `PAGE_OUT_OF_RANGE`, `INVALID_ENTRY` là quy ước của nhóm trong đặc tả, không phải tên của nguồn. Nguồn dùng các từ như "trap", "invalid page reference" [2, tr. 369], "exception" [4, tr. 33]. Đề bài dùng "invalid/page fault". Cần thống nhất cách gọi trong báo cáo.
+Các tên lỗi `INVALID_ADDRESS`, `PAGE_OUT_OF_RANGE`, `INVALID_ENTRY` là quy ước của nhóm trong đặc tả, không phải tên của nguồn. Nguồn dùng các từ như "trap", "invalid page reference" [2, tr. 369], "exception" [4, tr. 33], "page-fault exception" [4, tr. 32], `SEGMENTATION_FAULT` [1, ch. 18, tr. 9]. Đề bài dùng "invalid/page fault". Cần thống nhất cách gọi trong báo cáo.
 
 ## 2.6 Chi phí của bảng trang trong bộ nhớ
 
@@ -62,7 +62,7 @@ Trong cài đặt thông thường, bảng trang nằm trong bộ nhớ chính v
 ## 2.7 Một số giới hạn liên quan (để chuyển sang mục Giới hạn)
 
 - **Phân mảnh trong (internal fragmentation):** frame được cấp theo đơn vị nguyên, nên frame cuối của tiến trình có thể không đầy. Nếu kích thước tiến trình độc lập với kích thước trang, trung bình mất nửa trang mỗi tiến trình [2, tr. 362–363], [3, slide 23, 28]. Ví dụ trong giáo trình: trang 2048 byte, tiến trình 72766 byte cần 36 frame, lãng phí 962 byte ở frame cuối [2, tr. 362], [3, slide 28]. Chương 18 của [1] không bàn về ý này; chương 20 của [1] có nhắc (trang lớn thì phân mảnh trong tăng) [1, ch. 20, tr. 2].
-- **Kích thước bảng trang:** hệ thống 32-bit, trang 4 KB có 2^20 (khoảng 1 triệu) mục; mỗi mục 4 byte thì mỗi tiến trình cần tới 4 MB chỉ cho bảng trang [2, tr. 371], [3, slide 39]. Vì vậy các hệ thống thực tế dùng bảng trang nhiều cấp, ví dụ xv6 dùng cây ba cấp để tránh lưu các phần không dùng [4, tr. 31–32].
+- **Kích thước bảng trang:** hệ thống 32-bit, trang 4 KB có 2^20 (khoảng 1 triệu) mục; mỗi mục 4 byte thì mỗi tiến trình cần tới 4 MB chỉ cho bảng trang [2, tr. 371], [3, slide 39]. Vì vậy các hệ thống thực tế dùng bảng trang nhiều cấp, ví dụ xv6 dùng cây ba cấp để tránh lưu các phần không dùng [4, tr. 32].
 - **Số lần đọc bộ nhớ:** xem mục 2.6. Phần cứng thường thêm TLB để giảm chi phí này [3, slide 30], [4, tr. 32]. TLB nằm ngoài phạm vi của đồ án.
 
 ## 2.8 So sánh ngắn với relocation (base/limit)
@@ -70,7 +70,7 @@ Trong cài đặt thông thường, bảng trang nằm trong bộ nhớ chính v
 Bảng so sánh đầy đủ theo 5 tiêu chí nằm ở [comparison.md](comparison.md), phần giới hạn ở [limitations.md](limitations.md). Dưới đây là các căn cứ nền tảng:
 
 - **Cơ chế base/limit:** thanh ghi relocation (base) chứa địa chỉ vật lý nhỏ nhất, thanh ghi limit chứa dải địa chỉ logic; MMU cộng giá trị relocation vào địa chỉ logic và mỗi địa chỉ phải nằm trong giới hạn [2, tr. 357], [3, slide 17], [1, ch. 15, tr. 5–7].
-- **Phân mảnh ngoài:** cấp phát liên tục dẫn đến phân mảnh ngoài [2, tr. 359], [3, slide 21], [1, ch. 16, tr. 10]; phân trang tránh được [2, tr. 360, 362].
+- **Phân mảnh ngoài:** cấp phát liên tục dẫn đến phân mảnh ngoài [2, tr. 359] (định nghĩa: [3, slide 21]); với segmentation cũng vậy, do segment có kích thước thay đổi [1, ch. 16, tr. 10]; phân trang tránh được [2, tr. 360, 362].
 - **Segmentation:** mỗi segment có cặp base/bounds riêng [1, ch. 16, tr. 1–3].
 
 ---

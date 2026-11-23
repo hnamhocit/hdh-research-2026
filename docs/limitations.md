@@ -10,7 +10,7 @@ Giả định lấy từ nguồn:
 
 1. Page và frame có cùng kích thước [2, tr. 360], [3, slide 23].
 2. Kích thước trang là lũy thừa của 2 [2, tr. 361]. Đề cũng khuyến nghị chọn P là lũy thừa của 2 và không đổi P trong một bộ test.
-3. Mỗi tiến trình có một bảng trang riêng, tra trực tiếp bằng số trang [2, tr. 361], [1, ch. 18, tr. 3].
+3. Mỗi tiến trình có một bảng trang riêng, tra trực tiếp bằng số trang [2, tr. 361], [1, ch. 18, tr. 3–4, 6].
 4. Mỗi mục có bit valid–invalid; số mục của bảng được kiểm tra như vai trò của PTLR [2, tr. 368–369].
 
 Giả định do nhóm chốt (theo [specification.md](specification.md), không phải của nguồn):
@@ -26,7 +26,7 @@ Giả định do nhóm chốt (theo [specification.md](specification.md), không
 2. **Quản lý vùng trống đơn giản:** hệ điều hành chỉ cần giữ danh sách frame trống và lấy ra đủ số frame cần dùng [1, ch. 18, tr. 3], [3, slide 23].
 3. **Phép dịch đơn giản:** kích thước trang là lũy thừa của 2 nên tách số trang và độ dời rất dễ [2, tr. 361]. Bảng một cấp được tra trực tiếp bằng chỉ số là số trang, nên mỗi lần dịch chỉ đọc một mục trang [1, ch. 18, tr. 8–9]. So với bảng ba cấp của xv6, nơi CPU phải đọc ba mục cho mỗi lần dịch [4, tr. 32], đây là một lợi thế về số lần truy cập. Trong mô phỏng của nhóm, điều này ứng với chi phí O(1) mỗi lần dịch ([pseudocode.md](pseudocode.md)).
 4. **Bảo vệ theo từng trang:** bit valid–invalid và bit bảo vệ gắn với từng mục, nên kiểm tra quyền truy cập được ở mức từng trang [2, tr. 368–369], [3, slide 35]. Bit valid còn cho phép không cấp frame cho các trang không dùng [1, ch. 18, tr. 6].
-5. **Chia sẻ trang:** nhiều tiến trình có thể ánh xạ cùng các frame chứa mã không tự sửa, ví dụ thư viện libc [2, tr. 369–370], [3, slide 37].
+5. **Chia sẻ trang:** nhiều tiến trình có thể ánh xạ cùng các frame chứa mã không tự sửa [2, tr. 369–370], [3, slide 37], ví dụ thư viện libc [2, tr. 369–370].
 6. **Linh hoạt:** không cần giả định về cách heap và stack tăng trưởng trong không gian địa chỉ [1, ch. 18, tr. 2].
 
 Ưu điểm 1, 2, 4, 5 và 6 là của phân trang nói chung. Ưu điểm 3 (một lần đọc mục trang) là riêng của cấu trúc một cấp, và chính cấu trúc này gây ra giới hạn A1, A2 bên dưới.
@@ -76,6 +76,6 @@ Căn cứ vào [specification.md](specification.md):
 
 ## Ghi chú kiểm tra
 
-- Mọi trang trích dẫn đã mở nguồn đọc lại. Số liệu đã đối chiếu: 2^20 mục và 4 MB ([2], [3], [1] đều khớp), 400 MB cho 100 tiến trình [1, ch. 18, tr. 5], 2^52 mục [3, slide 43], ví dụ 12 ns [3, slide 34], bảng 4 MB giảm còn 1 MB khi trang 16 KB [1, ch. 20, tr. 1].
+- Mọi trang trích dẫn đã mở nguồn đọc lại. Số liệu đã đối chiếu: 2^20 mục và 4 MB ([2], [3], [1] đều khớp), 400 MB cho 100 tiến trình [1, ch. 18, tr. 5], 2^52 mục [3, slide 43], ví dụ 12 ns [3, slide 34], bảng 4 MB giảm còn 1 MB khi trang 16 KB [1, ch. 20, tr. 1–2].
 - Các nguồn tính bảng 4 MB theo công thức 2^32 / 2^12 × 4 byte; kết quả khớp nhau.
 - Khai báo AI trong báo cáo: Claude Code hỗ trợ đối chiếu nguồn và soạn nháp. Đăng chịu trách nhiệm đọc lại và hiểu toàn bộ nội dung.
