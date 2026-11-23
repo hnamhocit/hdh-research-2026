@@ -36,7 +36,7 @@ def translate_address(logical_address: int, page_size: int, page_table: list[dic
         }
 
     entry = page_table[page_number]
-    if not entry.get("valid", False):
+    if not bool(entry.get("valid", 0)):
         trace.append(f"Valid-Bit Check Failed: page {page_number} is marked INVALID (valid = 0).")
         return {
             "status": "ERROR",
@@ -73,20 +73,27 @@ def run_batch(input_path: str, output_path: str, trace_dir: str) -> None:
         raise ValueError("Page size must be a positive power of 2.")
 
     page_table = config["page_table"]
-    test_cases = config["test_cases"]
+
+    if "test_cases" in config:
+        cases = config["test_cases"]
+    else:
+        cases = [
+            {"id": f"T{idx + 1:02d}", "description": f"LA {la}", "logical_address": la}
+            for idx, la in enumerate(config.get("addresses", []))
+        ]
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     os.makedirs(trace_dir, exist_ok=True)
 
     results = []
-    for tc in test_cases:
+    for tc in cases:
         tc_id = tc["id"]
         la = tc["logical_address"]
         expected = tc.get("expected")
 
         output = translate_address(la, page_size, page_table)
         actual = output["result"]
-        passed = (actual == expected) if expected is not None else None
+        passed = (actual == expected) if expected is not None else "N/A"
 
         record = {
             "id": tc_id,
@@ -94,7 +101,7 @@ def run_batch(input_path: str, output_path: str, trace_dir: str) -> None:
             "logical_address": la,
             "expected": expected,
             "actual": actual,
-            "pass_fail": "PASS" if passed else "FAIL",
+            "pass_fail": ("PASS" if passed else "FAIL") if expected is not None else "EXECUTED",
             "details": {
                 "page": output["page"],
                 "offset": output["offset"],
