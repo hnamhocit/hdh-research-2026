@@ -1,8 +1,24 @@
-# Ưu điểm và giới hạn của mô hình bảng trang một cấp (bản nháp của Đăng)
+# Giả định, ưu điểm và giới hạn của mô hình bảng trang một cấp (bản nháp của Đăng)
 
 Chú thích trích dẫn: `[số, tr. x]` theo [references.md](references.md): [1] OSTEP, [2] Silberschatz *Operating System Concepts* 10th, [3] slide ch9 của thầy, [4] xv6 (MIT). Số thứ tự cuối cùng do Lý đánh lại. Câu không có trích dẫn là phân tích của nhóm. Phần B chỉ mô tả phạm vi của mô phỏng, căn cứ vào [specification.md](specification.md) (đọc, không chỉnh sửa).
 
 Đề yêu cầu nêu giới hạn của mô hình page table một cấp. Báo cáo nên tách hai nhóm: giới hạn của **kỹ thuật** (có nguồn) và giới hạn của **mô phỏng của nhóm** (do phạm vi đề đặt ra).
+
+## Giả định của mô hình
+
+Giả định lấy từ nguồn:
+
+1. Page và frame có cùng kích thước [2, tr. 360], [3, slide 23].
+2. Kích thước trang là lũy thừa của 2 [2, tr. 361]. Đề cũng khuyến nghị chọn P là lũy thừa của 2 và không đổi P trong một bộ test.
+3. Mỗi tiến trình có một bảng trang riêng, tra trực tiếp bằng số trang [2, tr. 361], [1, ch. 18, tr. 3].
+4. Mỗi mục có bit valid–invalid; số mục của bảng được kiểm tra như vai trò của PTLR [2, tr. 368–369].
+
+Giả định do nhóm chốt (theo [specification.md](specification.md), không phải của nguồn):
+
+5. Mọi địa chỉ, kích thước, độ dời tính bằng byte; page và frame đánh số từ 0.
+6. Mỗi lần chạy chỉ có một không gian địa chỉ, một bảng và một P cố định (bộ dữ liệu chung dùng P = 16).
+7. Bit valid là số nguyên 0 hoặc 1; entry invalid có frame là `null`.
+8. LA phải là số nguyên không âm; sai thì báo `INVALID_ADDRESS` trước khi tách địa chỉ.
 
 ## Ưu điểm của bảng trang một cấp (theo nguồn)
 

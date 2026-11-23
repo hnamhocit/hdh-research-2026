@@ -4,16 +4,16 @@ Quy ước: ✅ đã mở file nguồn và đọc đúng đoạn được ghi. M
 
 ## Danh mục (tiếng Anh)
 
-[1] Arpaci-Dusseau R.H., Arpaci-Dusseau A.C. (2018). *Operating Systems: Three Easy Pieces*, Arpaci-Dusseau Books. Dùng Chương 15 "Mechanism: Address Translation", Chương 16 "Segmentation", Chương 18 "Paging: Introduction", Chương 20 "Paging: Smaller Tables". http://ostep.org ✅
-- Các chương đã đọc đều ghi `[VERSION 1.10]` (chương 15 © 2008–23, chương 16, 18 © 2008–25). Preface ghi phát hành 8/2018 (v1.00) hoặc 7/2019 (v1.01). Ngày truy cập: 23/11/2026.
+[1] Arpaci-Dusseau R.H., Arpaci-Dusseau A.C. (2023). *Operating Systems: Three Easy Pieces*, Version 1.10, Arpaci-Dusseau Books. Dùng Chương 15 "Mechanism: Address Translation", Chương 16 "Segmentation", Chương 18 "Paging: Introduction", Chương 20 "Paging: Smaller Tables". http://ostep.org ✅
+- Các chương đã đọc đều ghi `[VERSION 1.10]` (chương 15 © 2008–23, chương 16, 18 © 2008–25). Lời nói đầu ghi cách trích dẫn chính thức: 8/2018 (v1.00), 7/2019 (v1.01) hoặc 10/2023 (v1.10); bản đã đọc là v1.10 nên ghi năm 2023. Sách không ghi nơi xuất bản. Ngày truy cập: 23/11/2026.
 - Số trang bên dưới là số in trong file chương. Mục lục sách: chương 15 bắt đầu tr. 153, chương 16 tr. 169, chương 18 tr. 199, chương 20 tr. 231.
 - Sách phát miễn phí theo từng chương tại http://ostep.org (không đưa file vào repo).
 
-[2] Silberschatz A., Galvin P.B., Gagne G. (2018). *Operating System Concepts*, 10th ed., Wiley, Hoboken NJ. Chương 9 "Main Memory". ✅ (số trang là số in trên sách = số trang file PDF trừ 106)
+[2] Silberschatz A., Galvin P.B., Gagne G. (2018). *Operating System Concepts*, 10th ed., Wiley, Hoboken NJ. Chương 9 "Main Memory". ✅ (nhà xuất bản và nơi xuất bản đã kiểm tra ở trang bản quyền của sách; số trang là số in trên sách = số trang file PDF trừ 106)
 
-[3] Silberschatz A., Galvin P.B., Gagne G. (2018). *Chapter 9: Main Memory* (slide `ch9.pptx`, học phần Hệ điều hành 012012500102, giảng viên Mai Ngọc Châu), Trường ĐH GTVT TP.HCM, https://courses.ut.edu.vn. ✅ (slide 25, 26, 33, 36 chỉ có tiêu đề và hình)
+[3] Silberschatz A., Galvin P.B., Gagne G. (2018). *Chapter 9: Main Memory* (slide `ch9.pptx`, học phần Hệ điều hành 012012500102, giảng viên Mai Ngọc Châu), Trường ĐH GTVT TP.HCM, https://courses.ut.edu.vn. ✅ (chân slide ghi "Silberschatz, Galvin and Gagne ©2018"; slide 25, 26, 33, 36 chỉ có tiêu đề và hình)
 
-[4] Cox R., Kaashoek F., Morris R. (2024). *xv6: a simple, Unix-like teaching operating system*, rev4 (ngày 31/08/2024), MIT. Dùng Chương 3 "Page tables". https://pdos.csail.mit.edu/6.1810/2024/xv6/book-riscv-rev4.pdf ✅ (tải miễn phí từ trang môn học 6.1810 của MIT, đã đọc chương 3. Số trang in = số trang file PDF. Ngày truy cập 23/11/2026.)
+[4] Cox R., Kaashoek F., Morris R. (2024). *xv6: a simple, Unix-like teaching operating system*, rev4 (ngày 31/08/2024), tài liệu trực tuyến của MIT (không ghi nhà xuất bản, nơi xuất bản). Dùng Chương 3 "Page tables". https://pdos.csail.mit.edu/6.1810/2024/xv6/book-riscv-rev4.pdf ✅ (tải miễn phí từ trang môn học 6.1810 của MIT, đã đọc chương 3. Số trang in = số trang file PDF. Ngày truy cập 23/11/2026.)
 - Lưu ý: xv6 dùng bảng trang **ba cấp** (RISC-V Sv39), không phải một cấp. Chỉ trích cho các ý chung (trang 4096 byte, offset 12 bit, bit valid) và cho phần giới hạn/mở rộng của mô hình một cấp. Không trích như mô hình một cấp.
 
 ## Bảng tra cứu: ý nào lấy từ đâu (chỉ các chỗ đã đọc)
@@ -56,11 +56,25 @@ Quy ước: ✅ đã mở file nguồn và đọc đúng đoạn được ghi. M
 
 File trích 14 trang giáo trình [2] (351, 353–354, 357, 359–363, 365–366, 368–369, 371): [references/evidence/Silberschatz-OSC10-ch9-trang-duoc-trich.pdf](references/evidence/Silberschatz-OSC10-ch9-trang-duoc-trich.pdf).
 
-## Còn lại
+## Tình trạng phần việc của Đăng (đối chiếu RESEARCH_PLAN.md)
 
-- [x] Nguồn [4] đã chốt là xv6 (MIT), đủ 4 nguồn có thể đọc và đối chiếu.
-- [x] So sánh paging với base/limit: xem [comparison.md](comparison.md). Giáo trình [2] chỉ nhắc segmentation ở ví dụ Intel IA-32 (mục 9.6.1, tr. 379), nên nguồn chính cho segmentation là [1] chương 16.
-- [x] Ưu điểm và giới hạn của mô hình một cấp: xem [limitations.md](limitations.md). Cơ sở lý thuyết: xem [theory.md](theory.md).
-- [x] Sơ đồ bảng trang một cấp (nhóm tự vẽ): [figures/page-table-single-level.svg](figures/page-table-single-level.svg).
-- [x] Review chéo giải thuật và thuật ngữ với phần của Minh: xem [review-dang.md](review-dang.md).
-- [ ] Khai báo AI trong báo cáo: Claude Code hỗ trợ tìm đoạn và số trang trong nguồn. Nội dung kỹ thuật do Đăng đối chiếu lại.
+| Tuần | Việc trong kế hoạch | Sản phẩm |
+|---|---|---|
+| 1 | Tìm slide học phần, ít nhất 1 giáo trình, tổng ≥ 4 nguồn có đủ thông tin trích dẫn | Danh mục [1]–[4] ở trên |
+| 1 | Nháp cơ sở lý thuyết: logical/physical address, page, frame, page table, valid/invalid | [theory.md](theory.md) mục 2.1–2.5 |
+| 1 | Ghi nguồn cho mọi công thức, hình, nội dung mượn | Trích dẫn `[số, tr. x]` trong mọi file; công thức `⌊LA/P⌋`, `LA mod P` ghi rõ là cách viết tương đương do nhóm suy ra |
+| 2 | Giải thích cơ chế dịch theo từng bước | [theory.md](theory.md) mục 2.3–2.4 |
+| 2 | Sơ đồ bảng trang một cấp (tự vẽ hoặc ghi nguồn) | [figures/page-table-single-level.svg](figures/page-table-single-level.svg) (nhóm tự vẽ) |
+| 2 | Nháp giới hạn của mô hình một cấp | [limitations.md](limitations.md) phần A, B |
+| 3 | So sánh với base/limit theo ≥ 3 tiêu chí | [comparison.md](comparison.md) (5 tiêu chí) |
+| 3 | Ưu điểm, hạn chế và giả định của mô hình một cấp | [limitations.md](limitations.md) |
+| 3 | Rà soát nguồn cho bảng so sánh và nhận định kỹ thuật | Đã đối chiếu từng ô với trang nguồn |
+| 4 | Kiểm tra ≥ 4 nguồn gồm slide học phần và giáo trình | [2] giáo trình, [3] slide học phần, [1], [4] |
+| 4 | Rà soát trích dẫn công thức, hình, bảng, code | Đã chạy kiểm tra tự động 54 cặp (nguồn, trang) |
+| 4 | Review chéo giải thuật, thuật ngữ, giải thích kết quả | [review-dang.md](review-dang.md) |
+
+Còn lại cho báo cáo (không phải file trong repo):
+
+- Lý đưa các phần trên vào báo cáo PDF và đánh lại số tài liệu, số hình, số bảng theo chương.
+- Khai báo AI trong báo cáo: Claude Code hỗ trợ tìm đoạn, đối chiếu số trang và soạn nháp. Nội dung kỹ thuật do Đăng đối chiếu lại và chịu trách nhiệm.
+- Nam xác nhận phần đóng góp của Đăng trong RESEARCH_PLAN.md.
