@@ -1,10 +1,19 @@
 {
   "page_size": 16,
   "page_table": [
-    {"valid": 1, "frame": 3},
-    {"valid": 0, "frame": null},
-    {"valid": 1, "frame": 7},
-    {"valid": 1, "frame": 0}
+    { "page": 0, "valid": true, "frame": 3 },
+    { "page": 1, "valid": false, "frame": null },
+    { "page": 2, "valid": true, "frame": 7 },
+    { "page": 3, "valid": true, "frame": 0 }
   ],
-  "addresses": [37, 51, 5, 48, 63, 64, 16, -1]
+  "test_cases": [
+    { "id": "T01", "description": "LA 37, hợp lệ ở page 2", "logical_address": 37, "expected": "PA 117" },
+    { "id": "T02", "description": "LA 51, hợp lệ ở page 3", "logical_address": 51, "expected": "PA 3" },
+    { "id": "T03", "description": "LA 5, hợp lệ ở page 0", "logical_address": 5, "expected": "PA 53" },
+    { "id": "T04", "description": "LA 48, offset = 0", "logical_address": 48, "expected": "PA 0" },
+    { "id": "T05", "description": "LA 63, offset = P - 1", "logical_address": 63, "expected": "PA 15" },
+    { "id": "T06", "description": "LA 64, page ngoài bảng", "logical_address": 64, "expected": "PAGE_OUT_OF_RANGE" },
+    { "id": "T07", "description": "LA 16, entry invalid", "logical_address": 16, "expected": "INVALID_ENTRY" },
+    { "id": "T08", "description": "LA -1, địa chỉ âm", "logical_address": -1, "expected": "INVALID_ADDRESS" }
+  ]
 }
