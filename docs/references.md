@@ -60,5 +60,7 @@ File trích 14 trang giáo trình [2] (351, 353–354, 357, 359–363, 365–366
 
 - [x] Nguồn [4] đã chốt là xv6 (MIT), đủ 4 nguồn có thể đọc và đối chiếu.
 - [x] So sánh paging với base/limit: xem [comparison.md](comparison.md). Giáo trình [2] chỉ nhắc segmentation ở ví dụ Intel IA-32 (mục 9.6.1, tr. 379), nên nguồn chính cho segmentation là [1] chương 16.
-- [x] Giới hạn của mô hình một cấp: xem [limitations.md](limitations.md). Cơ sở lý thuyết: xem [theory.md](theory.md).
+- [x] Ưu điểm và giới hạn của mô hình một cấp: xem [limitations.md](limitations.md). Cơ sở lý thuyết: xem [theory.md](theory.md).
+- [x] Sơ đồ bảng trang một cấp (nhóm tự vẽ): [figures/page-table-single-level.svg](figures/page-table-single-level.svg).
+- [x] Review chéo giải thuật và thuật ngữ với phần của Minh: xem [review-dang.md](review-dang.md).
 - [ ] Khai báo AI trong báo cáo: Claude Code hỗ trợ tìm đoạn và số trang trong nguồn. Nội dung kỹ thuật do Đăng đối chiếu lại.

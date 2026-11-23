@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="Arial, Helvetica, sans-serif" font-size="14">
+  <title>Dịch địa chỉ bằng bảng trang một cấp (P = 16 byte, LA = 37)</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="600" fill="#ffffff"/>
+
+  <!-- ④ offset copied unchanged (drawn first, routed above everything) -->
+  <path d="M180,95 L180,32 L730,32 L730,167" fill="none" stroke="#92400e" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="455" y="24" text-anchor="middle" font-size="12" fill="#92400e">④ độ dời d giữ nguyên</text>
+
+  <!-- Logical address -->
+  <text x="30" y="60" font-weight="bold" fill="#111">Địa chỉ logic LA = 37</text>
+  <text x="30" y="80" font-size="12" fill="#444">nhị phân 10 0101</text>
+  <rect x="30" y="95" width="70" height="40" fill="#dbeafe" stroke="#1e40af"/>
+  <rect x="100" y="95" width="100" height="40" fill="#fef3c7" stroke="#92400e"/>
+  <text x="65" y="120" text-anchor="middle" fill="#111">p = 2</text>
+  <text x="150" y="120" text-anchor="middle" fill="#111">d = 5</text>
+  <text x="52" y="153" font-size="12" fill="#444">⌊37 / 16⌋</text>
+  <text x="150" y="153" text-anchor="middle" font-size="12" fill="#444">37 mod 16</text>
+
+  <!-- ①② p indexes the table -->
+  <path d="M42,135 L42,195 L322,195" fill="none" stroke="#1e40af" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="55" y="187" font-size="12" fill="#1e40af">① p &lt; N? (2 &lt; 4: có)</text>
+  <text x="55" y="215" font-size="12" fill="#1e40af">② tra mục p = 2: valid = 1</text>
+
+  <!-- Page table -->
+  <text x="330" y="60" font-weight="bold" fill="#111">Bảng trang (N = 4 mục)</text>
+  <text x="330" y="80" font-size="12" fill="#444">chỉ số   |   valid   |   frame</text>
+  <rect x="330" y="95" width="190" height="40" fill="#f3f4f6" stroke="#6b7280"/>
+  <text x="357" y="120" text-anchor="middle" fill="#111">0</text><text x="420" y="120" text-anchor="middle" fill="#111">1</text><text x="487" y="120" text-anchor="middle" fill="#111">3</text>
+  <rect x="330" y="135" width="190" height="40" fill="#fee2e2" stroke="#6b7280"/>
+  <text x="357" y="160" text-anchor="middle" fill="#111">1</text><text x="420" y="160" text-anchor="middle" fill="#111">0</text><text x="487" y="160" text-anchor="middle" fill="#111">—</text>
+  <rect x="330" y="175" width="190" height="40" fill="#dcfce7" stroke="#166534" stroke-width="2.5"/>
+  <text x="357" y="200" text-anchor="middle" fill="#111">2</text><text x="420" y="200" text-anchor="middle" fill="#111">1</text><text x="487" y="200" text-anchor="middle" font-weight="bold" fill="#111">7</text>
+  <rect x="330" y="215" width="190" height="40" fill="#f3f4f6" stroke="#6b7280"/>
+  <text x="357" y="240" text-anchor="middle" fill="#111">3</text><text x="420" y="240" text-anchor="middle" fill="#111">1</text><text x="487" y="240" text-anchor="middle" fill="#111">0</text>
+  <line x1="385" y1="95" x2="385" y2="255" stroke="#9ca3af"/>
+  <line x1="455" y1="95" x2="455" y2="255" stroke="#9ca3af"/>
+
+  <!-- ③ frame to physical address -->
+  <path d="M520,195 L602,195" fill="none" stroke="#166534" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="528" y="187" font-size="12" fill="#166534">③ f = 7</text>
+
+  <!-- Physical address -->
+  <text x="610" y="160" font-weight="bold" fill="#111">Địa chỉ vật lý</text>
+  <rect x="610" y="175" width="70" height="40" fill="#dcfce7" stroke="#166534"/>
+  <rect x="680" y="175" width="100" height="40" fill="#fef3c7" stroke="#92400e"/>
+  <text x="645" y="200" text-anchor="middle" fill="#111">f = 7</text>
+  <text x="730" y="200" text-anchor="middle" fill="#111">d = 5</text>
+  <text x="610" y="242" fill="#111">PA = 7 × 16 + 5 = <tspan font-weight="bold">117</tspan></text>
+
+  <!-- Physical memory strip -->
+  <text x="610" y="285" font-weight="bold" fill="#111">Bộ nhớ vật lý (frame 16 byte)</text>
+  <rect x="610" y="297" width="240" height="26" fill="#f3f4f6" stroke="#6b7280"/>
+  <text x="620" y="315" font-size="12" fill="#444">frame 6: byte 96–111</text>
+  <rect x="610" y="323" width="240" height="26" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+  <text x="620" y="341" font-size="12" fill="#111">frame 7: byte 112–127</text>
+  <rect x="784" y="327" width="16" height="18" fill="#16a34a"/>
+  <text x="806" y="341" font-size="12" font-weight="bold" fill="#111">117</text>
+  <rect x="610" y="349" width="240" height="26" fill="#f3f4f6" stroke="#6b7280"/>
+  <text x="620" y="367" font-size="12" fill="#444">frame 8: byte 128–143</text>
+
+  <!-- Error branches -->
+  <line x1="30" y1="400" x2="870" y2="400" stroke="#d1d5db"/>
+  <text x="30" y="430" font-weight="bold" fill="#111">Hai nhánh lỗi với cùng bảng trang</text>
+  <rect x="30" y="445" width="400" height="70" fill="#fff7ed" stroke="#c2410c"/>
+  <text x="45" y="470" fill="#111">LA = 64 → p = 4, d = 0</text>
+  <text x="45" y="495" fill="#111">p = 4 ≥ N = 4 → <tspan font-weight="bold">PAGE_OUT_OF_RANGE</tspan> (dừng ở ①)</text>
+  <rect x="460" y="445" width="410" height="70" fill="#fef2f2" stroke="#b91c1c"/>
+  <text x="475" y="470" fill="#111">LA = 16 → p = 1, d = 0</text>
+  <text x="475" y="495" fill="#111">mục 1 có valid = 0 → <tspan font-weight="bold">INVALID_ENTRY</tspan> (dừng ở ②)</text>
+
+  <text x="30" y="550" font-size="12" fill="#444">Hình (nhóm tự vẽ): dịch LA 37 bằng bảng trang mẫu của nhóm (data/integration_cases.json), P = 16 byte.</text>
+  <text x="30" y="570" font-size="12" fill="#444">Cơ chế theo [2, tr. 360–361], [3, slide 24]; kiểm tra phạm vi bảng tương ứng PTLR [2, tr. 369]; bit valid–invalid [2, tr. 368].</text>
+</svg>

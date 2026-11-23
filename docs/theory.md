@@ -43,6 +43,10 @@ Dạng bit tương ứng trong OSTEP: `PhysAddr = (PFN << SHIFT) | offset`, vớ
 - Ví dụ OSTEP: bảng trang `3 7 5 2` cho 4 trang; LA 21 → page 1, offset 5, page 1 nằm ở frame 7, nên PA = 117 [1, ch. 18, tr. 3–5]. Hai ví dụ cho cùng PA 117 nhưng LA khác nhau (37 và 21), đừng nhầm lẫn khi trích.
 - Ví dụ giáo trình: trang 4 byte, LA 0 → page 0, offset 0, ở frame 5 nên PA = 5 × 4 + 0 = 20; LA 4 → page 1, offset 0, ở frame 6 nên PA = 24 [2, tr. 362].
 
+![Dịch LA 37 bằng bảng trang một cấp](figures/page-table-single-level.svg)
+
+*Hình (nhóm tự vẽ): dịch LA 37 bằng bảng trang mẫu của nhóm, P = 16 byte, kèm hai nhánh lỗi LA 64 và LA 16. Cơ chế theo [2, tr. 360–361], [3, slide 24].*
+
 ## 2.5 Bit valid/invalid
 
 Mỗi mục trong bảng trang có thể kèm một bit valid–invalid [2, tr. 368], [3, slide 35]. Bit đặt là *valid* nghĩa là trang thuộc không gian địa chỉ logic của tiến trình, tức là trang hợp lệ. Bit đặt là *invalid* nghĩa là trang không thuộc không gian địa chỉ logic của tiến trình [2, tr. 368], [3, slide 35]. Khi tiến trình truy cập một trang invalid, phần cứng báo bẫy (trap) cho hệ điều hành [2, tr. 368–369], [1, ch. 18, tr. 6]. Thuật toán truy cập bộ nhớ trong OSTEP kiểm tra `PTE.Valid == False` trước khi tạo địa chỉ vật lý, nếu sai thì phát sinh ngoại lệ [1, ch. 18, tr. 9]. Hệ điều hành xv6 cũng dùng cờ `PTE_V` cho mục đích này [4, tr. 33].

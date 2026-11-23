@@ -1,8 +1,19 @@
-# Giới hạn của mô hình bảng trang một cấp (bản nháp của Đăng)
+# Ưu điểm và giới hạn của mô hình bảng trang một cấp (bản nháp của Đăng)
 
 Chú thích trích dẫn: `[số, tr. x]` theo [references.md](references.md): [1] OSTEP, [2] Silberschatz *Operating System Concepts* 10th, [3] slide ch9 của thầy, [4] xv6 (MIT). Số thứ tự cuối cùng do Lý đánh lại. Câu không có trích dẫn là phân tích của nhóm. Phần B chỉ mô tả phạm vi của mô phỏng, căn cứ vào [specification.md](specification.md) (đọc, không chỉnh sửa).
 
 Đề yêu cầu nêu giới hạn của mô hình page table một cấp. Báo cáo nên tách hai nhóm: giới hạn của **kỹ thuật** (có nguồn) và giới hạn của **mô phỏng của nhóm** (do phạm vi đề đặt ra).
+
+## Ưu điểm của bảng trang một cấp (theo nguồn)
+
+1. **Không có phân mảnh ngoài:** bộ nhớ được chia thành các khối cố định, frame trống nào cũng cấp được cho bất kỳ page nào [2, tr. 360, 362], [1, ch. 18, tr. 12].
+2. **Quản lý vùng trống đơn giản:** hệ điều hành chỉ cần giữ danh sách frame trống và lấy ra đủ số frame cần dùng [1, ch. 18, tr. 3], [3, slide 23].
+3. **Phép dịch đơn giản:** kích thước trang là lũy thừa của 2 nên tách số trang và độ dời rất dễ [2, tr. 361]. Bảng một cấp được tra trực tiếp bằng chỉ số là số trang, nên mỗi lần dịch chỉ đọc một mục trang [1, ch. 18, tr. 8–9]. So với bảng ba cấp của xv6, nơi CPU phải đọc ba mục cho mỗi lần dịch [4, tr. 32], đây là một lợi thế về số lần truy cập. Trong mô phỏng của nhóm, điều này ứng với chi phí O(1) mỗi lần dịch ([pseudocode.md](pseudocode.md)).
+4. **Bảo vệ theo từng trang:** bit valid–invalid và bit bảo vệ gắn với từng mục, nên kiểm tra quyền truy cập được ở mức từng trang [2, tr. 368–369], [3, slide 35]. Bit valid còn cho phép không cấp frame cho các trang không dùng [1, ch. 18, tr. 6].
+5. **Chia sẻ trang:** nhiều tiến trình có thể ánh xạ cùng các frame chứa mã không tự sửa, ví dụ thư viện libc [2, tr. 369–370], [3, slide 37].
+6. **Linh hoạt:** không cần giả định về cách heap và stack tăng trưởng trong không gian địa chỉ [1, ch. 18, tr. 2].
+
+Ưu điểm 1, 2, 4, 5 và 6 là của phân trang nói chung. Ưu điểm 3 (một lần đọc mục trang) là riêng của cấu trúc một cấp, và chính cấu trúc này gây ra giới hạn A1, A2 bên dưới.
 
 ## A. Giới hạn của bảng trang một cấp (theo nguồn)
 
