@@ -1,0 +1,43 @@
+{
+  "id": "T07",
+  "mo_ta": "Không hợp lệ: entry của page 1 có valid = 0 (INVALID_ENTRY)",
+  "page_size": 16,
+  "ket_qua": {
+    "logical_address": 16,
+    "status": "error",
+    "page": 1,
+    "offset": 0,
+    "frame": null,
+    "physical_address": null,
+    "error": "INVALID_ENTRY"
+  },
+  "trace": [
+    {
+      "step": "validate_address",
+      "logical_address": 16,
+      "passed": true
+    },
+    {
+      "step": "split",
+      "page_size": 16,
+      "page": 1,
+      "offset": 0
+    },
+    {
+      "step": "check_page",
+      "page": 1,
+      "page_count": 4,
+      "passed": true
+    },
+    {
+      "step": "check_valid",
+      "page": 1,
+      "valid": 0
+    },
+    {
+      "step": "result",
+      "status": "error",
+      "error": "INVALID_ENTRY"
+    }
+  ]
+}
