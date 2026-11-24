@@ -1,0 +1,38 @@
+{
+  "id": "T06",
+  "mo_ta": "Không hợp lệ: page 4 ngoài bảng 4 entry (PAGE_OUT_OF_RANGE)",
+  "page_size": 16,
+  "ket_qua": {
+    "logical_address": 64,
+    "status": "error",
+    "page": 4,
+    "offset": 0,
+    "frame": null,
+    "physical_address": null,
+    "error": "PAGE_OUT_OF_RANGE"
+  },
+  "trace": [
+    {
+      "step": "validate_address",
+      "logical_address": 64,
+      "passed": true
+    },
+    {
+      "step": "split",
+      "page_size": 16,
+      "page": 4,
+      "offset": 0
+    },
+    {
+      "step": "check_page",
+      "page": 4,
+      "page_count": 4,
+      "passed": false
+    },
+    {
+      "step": "result",
+      "status": "error",
+      "error": "PAGE_OUT_OF_RANGE"
+    }
+  ]
+}

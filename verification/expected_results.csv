@@ -1,0 +1,9 @@
+id,page_size,logical_address,page,offset,frame,expected_independent,expected_nhom,khop,mo_ta
+T01,16,37,2,5,7,117,117,KHOP,"Hợp lệ, page 2"
+T02,16,51,3,3,0,3,3,KHOP,"Hợp lệ, page 3"
+T03,16,5,0,5,3,53,53,KHOP,"Hợp lệ, page 0"
+T04,16,48,3,0,0,0,0,KHOP,Offset = 0
+T05,16,63,3,15,0,15,15,KHOP,Offset = P - 1
+T06,16,64,4,0,,PAGE_OUT_OF_RANGE,PAGE_OUT_OF_RANGE,KHOP,Page ngoài bảng
+T07,16,16,1,0,,INVALID_ENTRY,INVALID_ENTRY,KHOP,Entry invalid
+T08,16,-1,,,,INVALID_ADDRESS,INVALID_ADDRESS,KHOP,Địa chỉ âm
