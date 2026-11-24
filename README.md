@@ -6,6 +6,21 @@
 - [Tiến độ và phân công](RESEARCH_PLAN.md)
 - [Rà soát tích hợp và hồ sơ tuần 4](docs/integration-review.md#kết-quả-rà-soát-tuần-4)
 
+## Hồ sơ báo cáo và trình bày
+
+- [Báo cáo nghiên cứu (PDF)](docs/Paging_Report.pdf)
+- [Slide thuyết trình (PDF)](presentation/Bài TT.pdf)
+
+## Thành viên thực hiện
+
+| Thành viên | Vai trò chính |
+| :--- | :--- |
+| **Nam** | Điều phối, đặc tả kỹ thuật và tích hợp |
+| **Đăng** | Nghiên cứu lý thuyết, bảng so sánh và tài liệu tham khảo |
+| **Minh** | Giải thuật, mã mô phỏng và phân tích độ phức tạp |
+| **Sơn** | Kiểm thử và kiểm chứng độc lập |
+| **Ly** | Biên tập báo cáo PDF, README và slide thuyết trình |
+
 ## Thư mục
 
 | Thư mục | Nội dung |

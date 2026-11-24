@@ -101,7 +101,7 @@
 
 ## 8. Quy ước nội bộ của nhóm — KHÔNG phải yêu cầu từ thầy
 
-- Nhóm: **Nam, Đăng, Minh, Sơn, Lý**. Phân công chi tiết: xem `RESEARCH_PLAN.md`.
+- Nhóm: **Nam, Đăng, Minh, Sơn, Ly**. Phân công chi tiết: xem `RESEARCH_PLAN.md`.
 - Nhóm muốn triển khai trong **24 giờ** nhưng **tổ chức đầu việc theo 4 giai đoạn/tuần** như đề. Không ghi sai ngày làm hoặc đóng góp thực tế.
 - Những thứ **chưa được đề quy định** và nhóm phải tự chốt: ngôn ngữ lập trình, `P` cụ thể, cấu trúc input/output, page table cụ thể, cách biểu diễn lỗi, cách đánh số page/frame, test case biên, format trace, cấu trúc repo, chuẩn trích dẫn.
 - Không tự suy diễn rằng phải có GUI, TLB, page replacement hoặc các phần mở rộng khác.
