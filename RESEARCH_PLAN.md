@@ -13,7 +13,7 @@
 | **Đăng** | Nghiên cứu lý thuyết | Paging, page table một cấp, valid/invalid, nguồn tham khảo, so sánh |
 | **Minh** | Giải thuật & mô phỏng | Pseudocode, script, input/output, trace, độ phức tạp |
 | **Sơn** | Kiểm thử & kiểm chứng | Test cases, expected result độc lập, actual result, pass/fail, bằng chứng |
-| **Lý** | Báo cáo & trình bày | Bố cục PDF, biên tập, README, slide/video, trích dẫn |
+| **Ly** | Báo cáo & trình bày | Bố cục PDF, biên tập, README, slide/video, trích dẫn |
 
 ## 2. Phạm vi và tiêu chí kỹ thuật chung
 
@@ -61,7 +61,7 @@
 - [ ] Chốt định dạng lưu `input`, `expected`, `actual`, `pass/fail` và trace.
 - [ ] Chuẩn bị mẫu bằng chứng tính độc lập cho ít nhất 3 trường hợp.
 
-### Lý — Khung tài liệu
+### Ly — Khung tài liệu
 - [ ] Tạo outline báo cáo 6–10 trang nội dung chính.
 - [ ] Tạo mẫu bảng thuật ngữ, bảng test, bảng trích dẫn và danh mục hình.
 - [ ] Tạo khung README và slide trình bày ngắn.
@@ -100,7 +100,7 @@
 - [ ] Ghi nhận lỗi và tạo issue tái hiện được.
 - [ ] Chọn ít nhất 3 trường hợp để trình bày trace chi tiết, có hợp lệ và không hợp lệ.
 
-### Lý
+### Ly
 - [ ] Viết phần câu hỏi nghiên cứu, phạm vi, mô hình và giả định.
 - [ ] Biên tập phần lý thuyết do Đăng cung cấp.
 - [ ] Đưa pseudocode/flowchart và trace mẫu vào báo cáo nháp.
@@ -142,7 +142,7 @@
 - [ ] Ghi trace chi tiết cho ít nhất 3 trường hợp, bao gồm hợp lệ và không hợp lệ.
 - [ ] Đối chiếu **ít nhất 3 trường hợp** bằng phương pháp tính độc lập, lưu bằng chứng có thể kiểm tra.
 
-### Lý
+### Ly
 - [ ] Tổng hợp bảng kết quả test và trace vào báo cáo.
 - [ ] Viết phần kiểm chứng, phân tích kết quả, so sánh và giới hạn.
 - [ ] Đảm bảo hình/bảng có chú thích và nguồn khi cần.
@@ -185,7 +185,7 @@
 - [ ] Kiểm tra bằng chứng độc lập không phụ thuộc vào logic code chính.
 - [ ] Review chéo demo và các trường hợp invalid.
 
-### Lý
+### Ly
 - [ ] Hoàn thiện PDF **6–10 trang nội dung chính** với đầy đủ phần bắt buộc.
 - [ ] Hoàn thiện README: cách chạy và cách tái tạo kết quả.
 - [ ] Hoàn thiện slide **hoặc** video trình bày ngắn.
@@ -241,7 +241,7 @@
 | Đăng | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
 | Minh | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
 | Sơn | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
-| Lý | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
+| Ly | _Chưa cập nhật_ | _Chưa cập nhật_ | ☐ |
 
 ---
 
