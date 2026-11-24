@@ -5,7 +5,7 @@ Script này KHÔNG import và KHÔNG sao chép logic của chương trình chín
 không dùng phép chia nguyên và chia lấy dư. Script đếm số khối P byte đầy đủ nằm trong LA
 để ra số trang, rồi offset = LA - đầu khối. Sau đó mới tra bảng.
 
-Page table (theo docs/specification.md: 4 entry, trang 1 có valid = 0; frame của trang 0, 2, 3
+Page table (theo docs/TECHNICAL_DOC.md: 4 entry, trang 1 có valid = 0; frame của trang 0, 2, 3
 suy ra từ expected của nhóm): page 0 -> frame 3, page 1 -> invalid, page 2 -> frame 7, page 3 -> frame 0.
 
 Chạy:  python expected_independent.py   (ghi expected_results.csv)

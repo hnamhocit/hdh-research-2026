@@ -34,11 +34,11 @@
 
 ### Nam — Điều phối và thiết kế
 
-[Xem bảng theo dõi và checklist tích hợp của Nam](docs/integration-review.md).
+[Xem tài liệu kỹ thuật tổng hợp](docs/TECHNICAL_DOC.md).
 
 - [x] Tạo bảng theo dõi công việc.
 - [x] Chốt hai câu hỏi nghiên cứu: quy trình dịch LA → PA và điều kiện địa chỉ không hợp lệ.
-- [x] Viết `docs/specification.md`: phạm vi, giả định, cách đánh số page/frame, định dạng input/output và mã lỗi.
+- [x] Viết `docs/TECHNICAL_DOC.md`: phạm vi, giả định, cách đánh số page/frame, định dạng input/output và mã lỗi.
 - [x] Chốt page size và mẫu page table với cả nhóm.
 - [x] Review specification cùng Minh và Sơn để bảo đảm code/test dùng chung hợp đồng dữ liệu.
 
@@ -67,7 +67,7 @@
 - [x] Tạo khung README và slide trình bày ngắn.
 - [x] Thống nhất quy tắc định dạng, tên file và cách trích dẫn với Đăng.
 
-**Đầu ra tuần 1:** `docs/specification.md`, `docs/references.md`, outline báo cáo, test matrix bản nháp, thiết kế independent verification.
+**Đầu ra tuần 1:** `docs/TECHNICAL_DOC.md`, outline báo cáo, test matrix bản nháp, thiết kế independent verification.
 
 ---
 
@@ -75,7 +75,7 @@
 
 ### Nam
 
-[Xem minh chứng chạy tích hợp và regression](docs/integration-review.md#ca-tích-hợp).
+[Xem minh chứng chạy tích hợp và regression](verification/test_matrix.md).
 
 - [x] Review pseudocode và các nhánh xử lý lỗi.
 - [x] Xác nhận chương trình tuân thủ specification tuần 1.
@@ -114,7 +114,7 @@
 
 ### Nam
 
-[Xem minh chứng chạy tích hợp và regression](docs/integration-review.md#ca-tích-hợp).
+[Xem minh chứng chạy tích hợp và regression](verification/test_matrix.md).
 
 - [x] Review tính nhất quán giữa specification, code và bộ test.
 - [x] Kiểm tra cách phân biệt lỗi page ngoài bảng với entry invalid theo quy ước đã công bố.
@@ -156,7 +156,7 @@
 
 ### Nam
 
-[Xem kết quả rà soát tuần 4 và các mục chờ xác nhận](docs/integration-review.md#kết-quả-rà-soát-tuần-4).
+[Xem kết quả rà soát tuần 4](verification/test_matrix.md).
 
 - [x] Review toàn bộ yêu cầu trong PDF đề bài.
 - [x] Kiểm tra code, report và kết quả có nhất quán.
@@ -214,7 +214,7 @@
 
 ## 8. Checklist nghiệm thu cuối
 
-Đã đối chiếu với PDF đề gốc và chạy lại bộ test tích hợp (8/8 PASS). Báo cáo có 9 trang nội dung chính và phụ lục mô tả đóng góp của cả 5 thành viên. Đóng góp và phần trình bày của cả nhóm đã được xác nhận theo thông báo của Nam. Khai báo AI trong Phụ lục B đã đối chiếu với [nhật ký hỗ trợ](docs/integration-review.md#kết-luận-dự-thảo-cho-báo-cáo). Slide đã làm rõ số ca tính tay và số lần truy cập bộ nhớ khi thiếu TLB.
+Đã đối chiếu với PDF đề gốc và chạy lại bộ test tích hợp (8/8 PASS). Báo cáo có 9 trang nội dung chính và phụ lục mô tả đóng góp của cả 5 thành viên. Đóng góp và phần trình bày của cả nhóm đã được xác nhận theo thông báo của Nam. Khai báo AI trong Phụ lục B đã đối chiếu với báo cáo. Slide đã làm rõ số ca tính tay và số lần truy cập bộ nhớ khi thiếu TLB.
 
 - [x] Trả lời rõ 2 câu hỏi research.
 - [x] Giải thích mô hình một cấp, giả định, đơn vị, đánh số page/frame và công thức.
@@ -241,7 +241,7 @@ Bản đối chiếu theo lịch sử Git và hồ sơ hiện tại. Nam xác nh
 
 | Thành viên | Đóng góp có minh chứng | Phần trình bày | Xác nhận theo Nam |
 |---|---|---|---|
-| Nam | Đặc tả, dữ liệu tích hợp và rà soát kết quả. Có hỗ trợ từ Codex theo [nhật ký](docs/integration-review.md). Minh chứng: `811e624`, [đặc tả](docs/specification.md). | Slide 1–2 và phần kết luận ở slide 10: giới thiệu, hai câu hỏi nghiên cứu và kết luận. | ✓ |
+| Nam | Đặc tả, dữ liệu tích hợp và rà soát kết quả. Minh chứng: `811e624`, [tài liệu kỹ thuật](docs/TECHNICAL_DOC.md). | Slide 1–2 và phần kết luận ở slide 10: giới thiệu, hai câu hỏi nghiên cứu và kết luận. | ✓ |
 | Đăng | Cơ sở lý thuyết, sơ đồ, nguồn, so sánh, giới hạn và review chéo. Minh chứng: `312fef0`, `7359a83`, `8478684`, `6016fac`. | Slide 3, phần so sánh ở slide 9 và phần giới hạn ở slide 10. | ✓ |
 | Minh | Simulator, tương thích đầu vào tích hợp và phân tích độ phức tạp. Minh chứng: `974a686`, `8aab25f`, `9e16859`. | Slide 4–5 và phần độ phức tạp ở slide 9: giải thuật, mã lỗi và ví dụ dịch LA 37. | ✓ |
 | Sơn | Ma trận kiểm thử, trace và bằng chứng đối chiếu độc lập. Minh chứng: `38c446b`, [ma trận kiểm thử](verification/test_matrix.md). | Slide 6–8: giải thích các trace, kết quả 8 ca và cách kiểm chứng độc lập. | ✓ |

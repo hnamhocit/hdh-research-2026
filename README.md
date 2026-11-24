@@ -4,7 +4,7 @@
 
 - [Yêu cầu đồ án](REQUIREMENTS.md)
 - [Tiến độ và phân công](RESEARCH_PLAN.md)
-- [Rà soát tích hợp và hồ sơ tuần 4](docs/integration-review.md#kết-quả-rà-soát-tuần-4)
+- [Tài liệu kỹ thuật tổng hợp](docs/TECHNICAL_DOC.md)
 
 ## Hồ sơ báo cáo và trình bày
 
@@ -25,7 +25,7 @@
 
 | Thư mục | Nội dung |
 |---|---|
-| [docs/](docs/) | Đặc tả, tài liệu tham khảo và báo cáo PDF |
+| [docs/](docs/) | Tài liệu kỹ thuật, sơ đồ và báo cáo PDF |
 | [src/](src/) | Mã mô phỏng |
 | [tests/](tests/) | Bộ kiểm thử |
 | [data/](data/) | Bảng trang, đầu vào, kết quả dự kiến và kết quả chạy |
@@ -42,4 +42,4 @@ python3 src/translate.py data/integration_cases.json
 python3 tests/integration.py
 ```
 
-Lệnh đầu in kết quả và trace ra stdout. Lệnh thứ hai đối chiếu với [expected](data/expected_results.json), ghi [kết quả từng ca](data/actual_results.json) và [ba trace mẫu](data/traces/integration.json). Xem [đặc tả](docs/specification.md), [pseudocode](docs/pseudocode.md) và [cách tính độc lập](verification/byte-ranges.md).
+Lệnh đầu in kết quả và trace ra stdout. Lệnh thứ hai đối chiếu với [expected](data/expected_results.json), ghi [kết quả từng ca](data/actual_results.json) và [ba trace mẫu](data/traces/integration.json). Xem [tài liệu kỹ thuật](docs/TECHNICAL_DOC.md) và [cách tính độc lập](verification/byte-ranges.md).

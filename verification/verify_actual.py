@@ -4,7 +4,7 @@
 Với mỗi test, script kiểm tra:
   1. `expected` nhóm ghi có khớp expected độc lập không.
   2. `actual` có khớp expected độc lập không (status, page, offset, frame, physical_address, error).
-  3. Chuỗi bước trong `trace` có đúng thứ tự theo docs/specification.md không, và giá trị trong trace
+  3. Chuỗi bước trong `trace` có đúng thứ tự theo docs/TECHNICAL_DOC.md không, và giá trị trong trace
      có nhất quán với kết quả không.
   4. Trường `result` (PASS/FAIL) nhóm ghi có đúng với việc so sánh thật không.
 

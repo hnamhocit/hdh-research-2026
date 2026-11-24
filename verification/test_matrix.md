@@ -11,7 +11,7 @@ Phần của Sơn: Kiểm thử và kiểm chứng. Tài liệu này đối chi�
 | Công thức | `page = floor(LA / P)`, `offset = LA mod P`, `PA = frame × P + offset` |
 | Mã lỗi | `PAGE_OUT_OF_RANGE`, `INVALID_ENTRY`, `INVALID_ADDRESS` |
 
-Page table suy ra từ expected của nhóm (cần đối chiếu với `docs/specification.md`):
+Page table suy ra từ expected của nhóm (cần đối chiếu với `docs/TECHNICAL_DOC.md`):
 
 | Page | Dải byte | Frame | Valid bit |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ Các bằng chứng này gồm 3 trace chi tiết (T01 hợp lệ, T07 và T06 k
 
 ## 4. Kết quả chạy chương trình thật
 
-Chương trình dịch địa chỉ được chạy bằng `python src/translate.py data/integration_cases.json` và đối chiếu với expected tính độc lập bằng `verify_actual.py`. Cả 8 test cho kết quả `actual` bằng `expected_independent`, ngoài ra các bước trong `trace` đúng thứ tự theo `docs/specification.md`. Bảng kết quả đầy đủ nằm trong `ket_qua_doi_chieu.csv`.
+Chương trình dịch địa chỉ được chạy bằng `python src/translate.py data/integration_cases.json` và đối chiếu với expected tính độc lập bằng `verify_actual.py`. Cả 8 test cho kết quả `actual` bằng `expected_independent`, ngoài ra các bước trong `trace` đúng thứ tự theo `docs/TECHNICAL_DOC.md`. Bảng kết quả đầy đủ nằm trong `ket_qua_doi_chieu.csv`.
 
 | ID | LA | Expected độc lập | Actual (chạy thật) | Pass/Fail |
 | --- | --- | --- | --- | --- |
