@@ -9,7 +9,7 @@
 ## Hồ sơ báo cáo và trình bày
 
 - [Báo cáo nghiên cứu (PDF)](docs/Paging_Report.pdf)
-- [Slide thuyết trình (PDF)](presentation/Bài TT.pdf)
+- [Slide thuyết trình (PDF)](presentation/B%C3%A0i%20TT.pdf)
 
 ## Thành viên thực hiện
 

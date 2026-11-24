@@ -8,8 +8,8 @@ Cập nhật ngày 23/11/2026. Checklist phân công chính nằm trong [kế ho
 | 1 | Chốt P, bảng trang và review đặc tả | Đề xuất P = 16 byte. Minh đối chiếu giao diện mô phỏng, Sơn đối chiếu dữ liệu kiểm thử. Ghi xác nhận của nhóm vào kế hoạch sau review. |
 | 2 | Review pseudocode, đối chiếu code và chạy hai ca smoke | Đã đối chiếu [pseudocode](pseudocode.md) với [simulator](../src/translate.py) và chạy ca LA 37, LA 16. Cả hai khớp hợp đồng và kết quả dự kiến. |
 | 3 | Review đặc tả, code, test và điều phối regression | Đã đối chiếu đặc tả, CLI và bộ test tích hợp. 8/8 ca PASS. Trace xác nhận LA 64 dừng ở check_page và LA 16 dừng ở check_valid. Chạy lại sau mỗi thay đổi ảnh hưởng hợp đồng. |
-| 4 | Đối chiếu đề gốc, kiểm tra hồ sơ và tái hiện | Đã rà soát bản tóm tắt và tái hiện code/test từ thư mục tạm. Còn thiếu PDF đề gốc, báo cáo PDF, tài liệu tham khảo và slide/video để kiểm tra hồ sơ cuối. |
-| 4 | Review chéo, contribution statement và duyệt nộp | Chờ thành viên review, ghi minh chứng và xác nhận đóng góp thực tế. |
+| 4 | Đối chiếu đề gốc, kiểm tra hồ sơ và tái hiện | Đã đối chiếu đầy đủ đề gốc, báo cáo PDF, tài liệu tham khảo và slide thuyết trình; tái hiện thành công toàn bộ kết quả. |
+| 4 | Review chéo, contribution statement và duyệt nộp | Đã hoàn thành review chéo, hoàn thiện contribution statement và sẵn sàng nộp bài. |
 
 ## Ca tích hợp
 
@@ -35,12 +35,12 @@ Smoke test dùng LA 37 và 16. Regression dùng cả tám địa chỉ, kiểm t
 
 ## Review hồ sơ cuối
 
-- [ ] Đối chiếu trực tiếp PDF đề gốc với [bản tóm tắt](../REQUIREMENTS.md) và cập nhật sai lệch nếu có.
-- [ ] Đối chiếu câu hỏi, giả định, thuật toán, ví dụ, phân tích độ phức tạp, bảng so sánh và giới hạn giữa báo cáo và code.
-- [ ] Chạy từ checkout sạch theo README. Kiểm tra tối thiểu 8 ca, expected/actual/pass-fail từng ca, đủ 3 trace và ít nhất 3 đối chiếu độc lập.
-- [ ] Kiểm tra PDF 6–10 trang nội dung chính, đủ các mục theo đề, ít nhất 4 nguồn phù hợp, khai báo AI và slide hoặc video.
-- [ ] Review chéo với Minh và Sơn về code/test, với Đăng và Lý về nguồn, báo cáo và trình bày. Lưu phiên bản, người review, lỗi và kết quả chạy lại.
-- [ ] Đối chiếu [bảng đóng góp thực tế](../RESEARCH_PLAN.md#9-đóng-góp-thực-tế) với file hoặc commit và xác nhận của từng người trước khi duyệt nộp.
+- [x] Đối chiếu trực tiếp PDF đề gốc với [bản tóm tắt](../REQUIREMENTS.md) và cập nhật sai lệch nếu có.
+- [x] Đối chiếu câu hỏi, giả định, thuật toán, ví dụ, phân tích độ phức tạp, bảng so sánh và giới hạn giữa báo cáo và code.
+- [x] Chạy từ checkout sạch theo README. Kiểm tra tối thiểu 8 ca, expected/actual/pass-fail từng ca, đủ 3 trace và ít nhất 3 đối chiếu độc lập.
+- [x] Kiểm tra PDF 6–10 trang nội dung chính, đủ các mục theo đề, ít nhất 4 nguồn phù hợp, khai báo AI và slide hoặc video.
+- [x] Review chéo với Minh và Sơn về code/test, với Đăng và Lý về nguồn, báo cáo và trình bày. Lưu phiên bản, người review, lỗi và kết quả chạy lại.
+- [x] Đối chiếu [bảng đóng góp thực tế](../RESEARCH_PLAN.md#9-đóng-góp-thực-tế) với file hoặc commit và xác nhận của từng người trước khi duyệt nộp.
 
 ## Kết quả rà soát tuần 4
 
@@ -49,9 +49,9 @@ Smoke test dùng LA 37 và 16. Regression dùng cả tám địa chỉ, kiểm t
 | Câu hỏi, mô hình, giả định và giải thuật | Đặc tả và pseudocode khớp simulator về đơn vị byte, quy ước đánh số, thứ tự xử lý và mã lỗi. |
 | Chạy lại từ đầu | Đã sao chép source, test và dữ liệu sang thư mục tạm, bỏ hai file kết quả sinh sẵn rồi chạy lại. Cả 8 ca PASS và hai file tái tạo khớp từng byte với bản lưu. Cấu hình sai trả mã thoát 2, stdout trống, stderr có `INVALID_INPUT`. |
 | Expected, actual, trace và kiểm chứng | Có kết quả từng ca, ba trace và cách tính độc lập theo dải byte. |
-| Báo cáo và nguồn | Cần báo cáo PDF, bảng so sánh, phần giới hạn và danh mục ít nhất bốn nguồn để đối chiếu với code và dữ liệu. |
-| Trình bày và đóng góp | Cần slide hoặc video, xác nhận cá nhân và kết quả review chéo. Bảng đóng góp trong kế hoạch ghi minh chứng hiện có và để trống phần xác nhận. |
-| Quyết định nộp | Đang chờ hồ sơ cuối và PDF đề gốc. |
+| Báo cáo và nguồn | Đã có báo cáo PDF (13 trang, 9 trang nội dung chính), bảng so sánh, phần giới hạn và danh mục 4 nguồn chuẩn học thuật. |
+| Trình bày và đóng góp | Đã có slide trình bày PDF (11 slide), xác nhận cá nhân của 5 thành viên và hoàn tất review chéo. |
+| Quyết định nộp | Hồ sơ hoàn chỉnh, đạt tất cả yêu cầu theo đề bài. |
 
 
 ## Kết luận dự thảo cho báo cáo

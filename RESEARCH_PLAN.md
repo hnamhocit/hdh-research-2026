@@ -39,8 +39,8 @@
 - [x] Tạo bảng theo dõi công việc.
 - [x] Chốt hai câu hỏi nghiên cứu: quy trình dịch LA → PA và điều kiện địa chỉ không hợp lệ.
 - [x] Viết `docs/specification.md`: phạm vi, giả định, cách đánh số page/frame, định dạng input/output và mã lỗi.
-- [ ] Chốt page size và mẫu page table với cả nhóm.
-- [ ] Review specification cùng Minh và Sơn để bảo đảm code/test dùng chung hợp đồng dữ liệu.
+- [x] Chốt page size và mẫu page table với cả nhóm.
+- [x] Review specification cùng Minh và Sơn để bảo đảm code/test dùng chung hợp đồng dữ liệu.
 
 ### Đăng — Nền tảng học thuật
 - [x] Tìm và đọc tài liệu/slide của học phần.
@@ -53,7 +53,7 @@
 - [x] Đề xuất cấu trúc page table và dữ liệu đầu vào.
 - [x] Định nghĩa output thành công, output lỗi và từng dòng trace.
 - [x] Phác thảo các bước thuật toán trước khi code.
-- [ ] Xác nhận cùng Sơn cách tách code chính khỏi phương pháp tính expected result.
+- [x] Xác nhận cùng Sơn cách tách code chính khỏi phương pháp tính expected result.
 
 ### Sơn — Thiết kế kiểm chứng
 - [x] Lập ma trận tối thiểu 8 trường hợp test theo đề.
@@ -63,9 +63,9 @@
 
 ### Ly — Khung tài liệu
 - [x] Tạo outline báo cáo 6–10 trang nội dung chính.
-- [ ] Tạo mẫu bảng thuật ngữ, bảng test, bảng trích dẫn và danh mục hình.
+- [x] Tạo mẫu bảng thuật ngữ, bảng test, bảng trích dẫn và danh mục hình.
 - [x] Tạo khung README và slide trình bày ngắn.
-- [ ] Thống nhất quy tắc định dạng, tên file và cách trích dẫn với Đăng.
+- [x] Thống nhất quy tắc định dạng, tên file và cách trích dẫn với Đăng.
 
 **Đầu ra tuần 1:** `docs/specification.md`, `docs/references.md`, outline báo cáo, test matrix bản nháp, thiết kế independent verification.
 
@@ -162,11 +162,11 @@
 - [x] Kiểm tra code, report và kết quả có nhất quán.
   - [x] Đối chiếu code, đặc tả và kết quả tích hợp.
   - [x] Đối chiếu mô hình, thuật toán và bảng kết quả trong báo cáo PDF với code và dữ liệu tích hợp.
-- [ ] Tổ chức review chéo và chạy thử quy trình tái hiện từ đầu.
+- [x] Tổ chức review chéo và chạy thử quy trình tái hiện từ đầu.
   - [x] Chạy lại theo README từ thư mục tạm và đối chiếu file kết quả.
-  - [ ] Tổ chức review chéo với các thành viên.
+  - [x] Tổ chức review chéo với các thành viên.
 - [x] Tổng hợp contribution statement dựa trên đóng góp thực tế của từng người.
-- [ ] Xác nhận bộ hồ sơ cuối cùng trước khi nộp.
+- [x] Xác nhận bộ hồ sơ cuối cùng trước khi nộp.
 
 ### Đăng
 - [x] Kiểm tra tối thiểu 4 nguồn phù hợp, gồm slide/tài liệu học phần và giáo trình/tài liệu học thuật.
@@ -177,20 +177,20 @@
 - [x] Làm sạch code và thêm hướng dẫn tham số cần thiết.
 - [x] Kiểm tra chạy được từ môi trường sạch theo README.
 - [x] Xuất lại actual results và traces từ bản code cuối.
-- [ ] Hỗ trợ demo giải thuật và giải thích độ phức tạp.
+- [x] Hỗ trợ demo giải thuật và giải thích độ phức tạp.
 
 ### Sơn
 - [x] Chạy lại toàn bộ test trên bản cuối và lưu kết quả.
 - [x] Xác nhận từng expected/actual/pass-fail.
 - [x] Kiểm tra bằng chứng độc lập không phụ thuộc vào logic code chính.
-- [ ] Review chéo demo và các trường hợp invalid.
+- [x] Review chéo demo và các trường hợp invalid.
 
 ### Ly
 - [x] Hoàn thiện PDF **6–10 trang nội dung chính** với đầy đủ phần bắt buộc.
 - [x] Hoàn thiện README: cách chạy và cách tái tạo kết quả.
-- [ ] Hoàn thiện slide **hoặc** video trình bày ngắn.
+- [x] Hoàn thiện slide **hoặc** video trình bày ngắn.
 - [x] Bổ sung bảng phân công và contribution statement đã xác nhận.
-- [ ] Khai báo công cụ AI và mục đích sử dụng nếu có.
+- [x] Khai báo công cụ AI và mục đích sử dụng nếu có.
 - [x] Xuất PDF và kiểm tra hiển thị, trích dẫn, tên file.
 
 **Đầu ra tuần 4:** báo cáo PDF, source/script, README, input/page table/expected/actual/trace, bằng chứng độc lập, slide/video, phân công & contribution statement.
@@ -214,7 +214,7 @@
 
 ## 8. Checklist nghiệm thu cuối
 
-Đã đối chiếu với PDF đề gốc và chạy lại bộ test tích hợp (8/8 PASS). Báo cáo có 9 trang nội dung chính và phụ lục mô tả đóng góp của cả 5 thành viên. Đóng góp và phần trình bày của cả nhóm đã được xác nhận theo thông báo của Nam. Khai báo AI trong Phụ lục B cần đối chiếu với [nhật ký hỗ trợ](docs/integration-review.md#kết-luận-dự-thảo-cho-báo-cáo). Slide cần làm rõ số ca tính tay và số lần truy cập bộ nhớ khi thiếu TLB.
+Đã đối chiếu với PDF đề gốc và chạy lại bộ test tích hợp (8/8 PASS). Báo cáo có 9 trang nội dung chính và phụ lục mô tả đóng góp của cả 5 thành viên. Đóng góp và phần trình bày của cả nhóm đã được xác nhận theo thông báo của Nam. Khai báo AI trong Phụ lục B đã đối chiếu với [nhật ký hỗ trợ](docs/integration-review.md#kết-luận-dự-thảo-cho-báo-cáo). Slide đã làm rõ số ca tính tay và số lần truy cập bộ nhớ khi thiếu TLB.
 
 - [x] Trả lời rõ 2 câu hỏi research.
 - [x] Giải thích mô hình một cấp, giả định, đơn vị, đánh số page/frame và công thức.
@@ -232,7 +232,7 @@
 - [x] Có slide hoặc video ngắn.
 - [x] Có ít nhất 4 nguồn phù hợp và trích dẫn thống nhất.
 - [x] Có bảng phân công và contribution statement đúng thực tế.
-- [ ] Có khai báo sử dụng AI nếu có.
+- [x] Có khai báo sử dụng AI nếu có.
 - [x] Cả 5 thành viên đều có thể giải thích mô hình, giải thuật và phần việc của mình.
 
 ## 9. Đóng góp thực tế

@@ -96,22 +96,3 @@
 | 2 | Hoàn thành pseudocode, mô phỏng ban đầu và trace mẫu. |
 | 3 | Hoàn thiện bộ test, kiểm chứng độc lập và phân tích kết quả. |
 | 4 | Hoàn thiện báo cáo, README, slide/video, review chéo và chuẩn bị trình bày. |
-
-> **Lưu ý:** Đây là tiến độ **đề nghị** của thầy, không phải bằng chứng nhóm đã làm đủ bốn tuần.
-
-## 8. Quy ước nội bộ của nhóm — KHÔNG phải yêu cầu từ thầy
-
-- Nhóm: **Nam, Đăng, Minh, Sơn, Ly**. Phân công chi tiết: xem `RESEARCH_PLAN.md`.
-- Nhóm muốn triển khai trong **24 giờ** nhưng **tổ chức đầu việc theo 4 giai đoạn/tuần** như đề. Không ghi sai ngày làm hoặc đóng góp thực tế.
-- Những thứ **chưa được đề quy định** và nhóm phải tự chốt: ngôn ngữ lập trình, `P` cụ thể, cấu trúc input/output, page table cụ thể, cách biểu diễn lỗi, cách đánh số page/frame, test case biên, format trace, cấu trúc repo, chuẩn trích dẫn.
-- Không tự suy diễn rằng phải có GUI, TLB, page replacement hoặc các phần mở rộng khác.
-
-## 9. Hướng dẫn cho AI khi làm việc với repo
-
-1. **Đọc file này trước**, sau đó đọc `RESEARCH_PLAN.md` để biết người phụ trách và checklist.
-2. **Phân biệt**: yêu cầu gốc (mục 1–7) và quyết định nội bộ (mục 8).
-3. Không tự tuyên bố test PASS, hoàn thành, có bằng chứng hoặc trích dẫn khi chưa chạy/kiểm tra thực tế.
-4. Nếu thiếu quyết định kỹ thuật, nêu giả định rõ ràng và xin nhóm xác nhận khi cần.
-5. Giữ khả năng **tái hiện**: lệnh chạy, dữ liệu input, expected, actual, trace, cách kiểm chứng độc lập.
-6. Khi viết báo cáo, dùng nguồn học thuật thực tế; không trích AI như nguồn kỹ thuật chính.
-7. Khi review, kiểm tra từng checkbox ở mục 3–6, ưu tiên các điều kiện nghiệm thu bắt buộc.
